@@ -1,178 +1,185 @@
 html {
-	font-size: 62.5%;
-	box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 body {
-	margin: 0;
-	height: 100vh;
-	font-size: 1.6rem;
-	font-family: Arial, Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 #root {
-	height: 100%;
+  height: 100%;
 }
 
 .grid-container {
-	display: grid;
-	grid-template-areas: 'header' 'main' 'footer';
-	grid-template-columns: 1fr;
-	grid-template-rows: 5rem 1fr 5rem;
-	height: 100%;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
 }
 
 h1 {
-	font-size: 1.8rem;
-	padding: 1rem 0;
+  font-size: 1.8rem;
+  padding: 1rem 0;
 }
 h2 {
-	font-size: 1.6rem;
-	padding: 1rem 0;
+  font-size: 1.6rem;
+  padding: 1rem 0;
 }
 header {
-	grid-area: header;
-	background-color: #203040;
+  grid-area: header;
+  background-color: #203040;
 }
 
 main {
-	grid-area: main;
-	padding: 1rem;
+  grid-area: main;
+  padding: 1rem;
 }
 
 footer {
-	grid-area: footer;
-	background-color: #203040;
-	color: #fff;
+  grid-area: footer;
+  background-color: #203040;
+  color: #fff;
 }
-
+.badge {
+  background-color: #f02020;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
 .row {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .row.top {
-	align-items: flex-start;
+  align-items: flex-start;
 }
 
 .col-1 {
-	flex: 1 1 25rem;
+  flex: 1 1 25rem;
 }
 .col-2 {
-	flex: 2 1 50rem;
+  flex: 2 1 50rem;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a.brand {
-	font-size: 3rem;
-	font-weight: bold;
-	color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
 }
 /* .card:hover {
 	background-color: #c0c0c0;
 } */
 a:hover {
-	color: #ff8000;
+  color: #ff8000;
 }
 
 header a {
-	color: #fff;
-	padding: 1rem;
+  color: #fff;
+  padding: 1rem;
 }
 
 ul {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 li {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 button {
-	padding: 1rem;
-	border-radius: 0.5rem;
-	border: 0.1rem #a4a4a4 solid;
-	font-family: Arial, Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: #f8f8f8;
-	cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
 }
 button:hover {
-	border: 0.1rem #404040 solid;
+  border: 0.1rem #404040 solid;
 }
 button.primary {
-	background-color: #f0c040;
+  background-color: #f0c040;
 }
 button.block {
-	width: 100%;
+  width: 100%;
 }
 .row.center {
-	justify-content: center;
+  justify-content: center;
 }
 
 img {
-	border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 img.medium {
-	max-width: 29rem;
-	width: 100%;
+  max-width: 29rem;
+  width: 100%;
 }
 
 img.large {
-	width: 100%;
+  width: 100%;
 }
 
 .card {
-	border: 0.1rem #c0c0c0 solid;
-	background-color: #f8f8f8;
-	border-radius: 0.5rem;
-	margin: 1rem;
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
 }
 
 .card-body {
-	padding: 1rem;
+  padding: 1rem;
 }
 
 .card-body > * {
-	padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .price {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 .rating span {
-	color: #f0c040;
-	margin: 0.1rem;
+  color: #f0c040;
+  margin: 0.1rem;
 }
 .rating span:last-child {
-	color: black;
+  color: black;
 }
 
 .success {
-	color: green;
+  color: green;
 }
 
 .failure {
-	color: #a02020;
+  color: #a02020;
 }
 
 .alert {
-	padding: 1rem;
-	border: 0.1rem solid transparent;
-	border-radius: 0.5rem;
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
 }
 
 .alert-info {
-	color: #2020a0;
-	background-color: #e0e0ff;
+  color: #2020a0;
+  background-color: #e0e0ff;
 }
 .alert-danger {
-	color: #a02020;
-	background-color: #ffe0e0e0;
+  color: #a02020;
+  background-color: #ffe0e0e0;
 }
