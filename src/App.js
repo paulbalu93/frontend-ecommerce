@@ -6,6 +6,7 @@ import ProductScreen from "./components/ProductScreen";
 import CartScreen from "./components/CartScreen";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import SigninScreen from "./components/SigninScreen";
 // import { useDispatch } from "react-redux";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <main>
           <Route path="/" component={HomeScreen} exact></Route>
           <Route path="/product/:id?" component={ProductScreen}></Route>
+          <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/cart/:id" component={CartScreen}></Route>
         </main>
         <footer class="row center">All rights reserved.</footer>
