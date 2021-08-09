@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import data from "../data";
 import Product from "../components/Product.js";
 import axios from "axios";
-import LoadingBox from "../components/LoadingBox";
+
 import ErrorBox from "../components/ErrorBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions.js";
+import loadingBox from "./LoadingBox";
 
 export default function HomeScreen() {
   // const [products, setProducts] = useState([]);
@@ -33,7 +34,7 @@ export default function HomeScreen() {
   return (
     <div>
       {loading ? (
-        <LoadingBox> </LoadingBox>
+        <loadingBox />
       ) : error ? (
         <ErrorBox variant="danger">{error}</ErrorBox>
       ) : (
