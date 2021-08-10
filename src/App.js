@@ -2,13 +2,14 @@ import "./App.css";
 
 import { BrowserRouter, Route } from "react-router-dom";
 import HomeScreen from "./components/HomeScreen";
+import PaymentMethodScreen from "./components/PaymentMethodScreen";
 import ProductScreen from "./components/ProductScreen";
 import CartScreen from "./components/CartScreen";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import SigninScreen from "./components/SigninScreen";
 import RegisterScreen from "./components/RegisterScreen";
-import ShippingAddressScreen from "./screens/ShippingAddressScreen";
+import ShippingAddressScreen from "./components/ShippingAddressScreen";
 import { signout } from "./actions/userActions";
 // import { useDispatch } from "react-redux";
 
@@ -67,7 +68,8 @@ function App() {
           <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
-          <Route path="/cart/:id" component={CartScreen}></Route>
+          <Route path="/payment" component={PaymentMethodScreen}></Route>
+          <Route path="/cart/:id?" component={CartScreen}></Route>
         </main>
         <footer class="row center">All rights reserved.</footer>
       </div>

@@ -39,7 +39,18 @@ main {
   grid-area: main;
   padding: 1rem;
 }
-
+input,
+select,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 footer {
   grid-area: footer;
   background-color: #203040;
@@ -195,7 +206,7 @@ img.large {
 }
 .form label {
   margin: 1rem 0;
-  display: block;
+  /* display: block; */
 }
 
 .dropdown {
