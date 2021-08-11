@@ -10,7 +10,10 @@ import { useSelector, useDispatch } from "react-redux";
 import SigninScreen from "./components/SigninScreen";
 import RegisterScreen from "./components/RegisterScreen";
 import ShippingAddressScreen from "./components/ShippingAddressScreen";
+import PlaceOrderScreen from "./components/PlaceOrderScreen";
 import { signout } from "./actions/userActions";
+import AdminRoute from "./components/AdminRoute";
+import ProductListScreen from "./components/ProductListScreen";
 // import { useDispatch } from "react-redux";
 
 function App() {
@@ -60,6 +63,27 @@ function App() {
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
+            {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <Link to="#admin">
+                  Admin <i className="fa fa-caret-down"></i>
+                </Link>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
+                  <li>
+                    <Link to="/productlist">Products</Link>
+                  </li>
+                  <li>
+                    <Link to="/orderlist">Orders</Link>
+                  </li>
+                  <li>
+                    <Link to="/userlist">Users</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </header>
         <main>
@@ -67,9 +91,14 @@ function App() {
           <Route path="/product/:id?" component={ProductScreen}></Route>
           <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
+          <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/cart/:id?" component={CartScreen}></Route>
+          <AdminRoute
+            path="/productlist"
+            component={ProductListScreen}
+          ></AdminRoute>
         </main>
         <footer class="row center">All rights reserved.</footer>
       </div>
